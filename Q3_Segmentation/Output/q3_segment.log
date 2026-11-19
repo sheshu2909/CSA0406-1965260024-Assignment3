@@ -1,0 +1,19 @@
+segment table
+segment        base      limit  protection
+code     0x00400000     524288  read-only
+data     0x00800000     262144  read/write
+heap     0x00C00000    2097152  read/write
+stack    0x7FF00000      65536  read/write
+
+translations
+main()                 seg 0 off 0x000100  -> physical 0x00400100  [code, read-only]
+printf()               seg 0 off 0x07FFF0  -> physical 0x0047FFF0  [code, read-only]
+customer_record[0]     seg 1 off 0x000000  -> physical 0x00800000  [data, read/write]
+customer_record[9]     seg 1 off 0x000240  -> physical 0x00800240  [data, read/write]
+malloc() result        seg 2 off 0x100000  -> physical 0x00D00000  [heap, read/write]
+recursion frame        seg 3 off 0x00FFF0  -> physical 0x7FF0FFF0  [stack, read/write]
+runaway pointer        seg 3 off 0x010000  -> SEGMENTATION FAULT (offset 65536 >= limit 65536)
+corrupt index          seg 9 off 0x000010  -> invalid segment
+
+note: the code segment is read-only, so a write to 0x00400100
+      would be stopped by the MMU even though it is inside the limit.

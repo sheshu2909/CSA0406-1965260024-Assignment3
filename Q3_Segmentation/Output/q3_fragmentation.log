@@ -1,0 +1,22 @@
+region 64 MB, 20 segments of random size (0.1 .. 6 MB)
+
+loaded 19 of 20 segments after first fit
+after loading                holes  1  free     3.45 MB  largest     3.45 MB  used    60.55 MB
+after removing 10 segments   holes 10  free    34.31 MB  largest     5.37 MB  used    29.69 MB
+
+free list
+     start       size
+   3788800    5632000
+   9728000    4300800
+  16896000    2867200
+  23961600    5120000
+  31948800    3891200
+  39219200    1536000
+  46796800    3276800
+  52326400    4096000
+  59392000    1638400
+  63488000    3620864
+
+external fragmentation = 1 - largest_hole / total_free = 84.35%
+allocating 6 MB after the removals: FAILED - 34 MB is free but in pieces
+allocating 5 MB after the removals: succeeded

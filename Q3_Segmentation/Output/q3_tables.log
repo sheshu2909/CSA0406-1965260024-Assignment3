@@ -1,0 +1,15 @@
+scheme                                table bytes
+paging, one level, whole 4 GiB            4194304
+paging, two level, 1.2 GB program         1204096
+pure segmentation, 4 segments                  32
+segmented paging, 4 segments                16416
+
+paging 1-level in KB                         4096
+paging 2-level in KB                         1176
+segmentation in bytes                          32
+segmented paging in KB                         16
+
+address bits:
+  32-bit address, 4 KB pages ->    1048576 pages, 20 bits of page number, 12 bits of offset
+  48-bit address, 4 KB pages -> 68719476736 pages, 36 bits of page number, 12 bits of offset
+  4-level x86-64 walk: 9 + 9 + 9 + 9 + 12 = 48 bits
