@@ -1,0 +1,18 @@
+6 disks of 4 TB = 24 TB raw
+
+RAID          usable  overhead  survives                   read               write
+RAID 0       24.0 TB      0.0%  no disk failure            6x striped         6x striped
+RAID 1       12.0 TB     50.0%  1 disk (mirror pair)       3x                 3x
+RAID 5       20.0 TB     16.7%  1 disk (single parity)     5x                 1x + parity update
+RAID 6       16.0 TB     33.3%  2 disks (dual parity)      4x                 2x + dual parity
+RAID 10      12.0 TB     50.0%  1 per mirror pair          3x                 3x
+
+probability of losing data during a rebuild, AFR 4%/year
+RAID       disks n           6 h          24 h          48 h
+RAID 1           1     0.002740%     0.010959%     0.021918%
+RAID 5           5     0.013698%     0.054783%     0.109541%
+RAID 6           4     0.010958%     0.043828%     0.087642%
+RAID 10          1     0.002740%     0.010959%     0.021918%
+
+with 6 disks the array sees roughly 6x the failure rate of one
+disk, and the rebuild window is when the second failure hurts.

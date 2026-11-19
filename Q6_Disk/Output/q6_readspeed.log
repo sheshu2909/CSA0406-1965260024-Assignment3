@@ -1,0 +1,6 @@
+created ./logs/readtest.bin (256 MB)
+pass 1: 268435456 bytes in   216.07 ms  ->   1184.8 MB/s
+pass 2: 268435456 bytes in   199.04 ms  ->   1286.2 MB/s
+pass 3: 268435456 bytes in   188.48 ms  ->   1358.3 MB/s
+
+file size 256.0 MB
