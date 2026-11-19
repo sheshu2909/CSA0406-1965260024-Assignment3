@@ -1,0 +1,29 @@
+fault table: 10000 references, 64 pages, locality 90% hot set
+
+workload frames     FIFO      LRU  Optimal    Clock
+locality      3     6169     6082     4041     6167
+locality      4     5018     4826     2865     4979
+locality      5     3982     3655     2000     3872
+locality      6     3237     2593     1383     2961
+locality      7     2719     1853     1006     2280
+locality      8     2341     1384      885     1843
+locality      9     2071     1152      814     1507
+locality     10     1852     1021      759     1267
+
+random        3     9511     9508     8151     9509
+random        4     9368     9364     7626     9366
+random        5     9221     9211     7183     9223
+random        6     9046     9051     6803     9052
+random        7     8893     8889     6463     8889
+random        8     8741     8756     6160     8750
+random        9     8588     8590     5879     8592
+random       10     8450     8441     5615     8450
+
+Belady string: FIFO 3 frames 9, 4 frames 10 faults
+               LRU  3 frames 10, 4 frames 8 faults
+
+run time on the 90%-locality string, 4 frames
+  FIFO         1.295 ms  over 100000 refs  (49484 faults,  0.013 us/ref)
+  LRU          2.066 ms  over 100000 refs  (47511 faults,  0.021 us/ref)
+  Clock        2.631 ms  over 100000 refs  (48810 faults,  0.026 us/ref)
+  Optimal      0.137 ms  over   2000 refs  (561 faults,  0.069 us/ref)
