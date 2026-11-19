@@ -1,0 +1,4 @@
+two processes: 1423 1424
+/usr/bin/grep: /proc/1423/maps: No such file or directory
+---
+/usr/bin/grep: /proc/1424/maps: No such file or directory

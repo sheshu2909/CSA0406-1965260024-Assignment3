@@ -1,0 +1,6 @@
+# before the swap
+library version : 1.0
+# after replacing libcrypto.dll with version 2 (program untouched)
+library version : 2.0
+# after restoring version 1
+library version : 1.0

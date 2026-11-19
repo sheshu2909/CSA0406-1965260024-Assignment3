@@ -1,0 +1,6 @@
+opening ./bin/libcrypto.dll lazily (RTLD_LAZY)
+library version : 1.0
+checksum before : 3392694286693606149
+checksum after  : 15938603005635908619
+library unloaded
+exit=0

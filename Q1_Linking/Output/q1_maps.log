@@ -1,0 +1,9 @@
+pid 1992, address space (text, data and shared objects only)
+address range                      perms  offset    object
+100400000-100401000                r--p   00000000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+100401000-100402000                r-xp   00001000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+100402000-100403000                rw-p   00002000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+100403000-100C07000                r--p   00003000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+100C07000-100C08000                rw-p   00807000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+100C08000-100C13000                r--p   00808000  /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/q1_maps.exe
+main is at 0x1004017e0, crypto_encrypt at 0x100401090

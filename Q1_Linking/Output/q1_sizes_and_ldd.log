@@ -1,0 +1,31 @@
+# Q1 sizes
+8419909 bin/q1_app_static.exe
+30529 bin/q1_app_shared.exe
+8406082 bin/libcrypto.dll
+
+# ldd q1_app_shared.exe
+	ntdll.dll => /c/WINDOWS/SYSTEM32/ntdll.dll (0x7ffe1ca70000)
+	KERNEL32.DLL => /c/WINDOWS/System32/KERNEL32.DLL (0x7ffe1a970000)
+	KERNELBASE.dll => /c/WINDOWS/System32/KERNELBASE.dll (0x7ffe19d90000)
+	libcrypto.dll => /c/Users/shesh/.config/freebuff-desktop/local-projects/360c0549-7338-4a84-9f3f-4d020779388d/work3/bin/libcrypto.dll (0x436e70000)
+	msys-2.0.dll => /usr/bin/msys-2.0.dll (0x7ffd9cc90000)
+
+# ldd q1_app_static.exe
+	ntdll.dll => /c/WINDOWS/SYSTEM32/ntdll.dll (0x7ffe1ca70000)
+	KERNEL32.DLL => /c/WINDOWS/System32/KERNEL32.DLL (0x7ffe1a970000)
+	KERNELBASE.dll => /c/WINDOWS/System32/KERNELBASE.dll (0x7ffe19d90000)
+	msys-2.0.dll => /usr/bin/msys-2.0.dll (0x7ffd9cc90000)
+
+# run static
+library version : 1.0
+records         : 2000000 bytes
+checksum before : 2429496717594679813
+checksum after  : 1261050995262068489
+encrypt time    : 218.463 ms
+
+# run shared
+library version : 1.0
+records         : 2000000 bytes
+checksum before : 2429496717594679813
+checksum after  : 1261050995262068489
+encrypt time    : 46.571 ms
