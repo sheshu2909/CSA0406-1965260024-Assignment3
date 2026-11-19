@@ -1,0 +1,12 @@
+CSA0406 Assignment 3 - Submission Checklist
+
+[X] Every task executed and its output captured in Output/
+[X] Every task has the C source in Source_Code/
+[X] Screenshots of the real runs in Screenshots/
+[X] Complete-the-Code programs (Q2 TODO 1, Q5 TODO 1) finished and run
+[X] Outputs compared with the expected outputs in the question paper
+[X] Diagrams for paging, segmentation, page faults, RAID and the Q7 plan
+[X] Measurements quoted from logs, not estimated
+[X] Platform limitations stated (MSYS2 page size, fault counters, fork)
+[X] README with name, register number, compiler, OS, build commands
+[X] Report with theory, code, output, evaluation, complexity and conclusion
