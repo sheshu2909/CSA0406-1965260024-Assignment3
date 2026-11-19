@@ -1,0 +1,18 @@
+100 processes, total requested memory 606303449 B (578.2 MB)
+
+1 KB   page: requested 606303449 B  allocated 606354432 B  waste    50983 B ( 0.01%)  worst 1020 B (process 87)
+4 KB   page: requested 606303449 B  allocated 606502912 B  waste   199463 B ( 0.03%)  worst 4092 B (process 87)
+2 MB   page: requested 606303449 B  allocated 713031680 B  waste 106728231 B (14.97%)  worst 2086876 B (process 40)
+
+per-process view (first 10):
+ process      bytes  4KB alloc      waste
+       0    1448761    1449984       1223
+       1     997561     999424       1863
+       2    8971396    8974336       2940
+       3    1468548    1470464       1916
+       4    3833945    3837952       4007
+       5     261145     262144        999
+       6    6117577    6119424       1847
+       7    4076096    4079616       3520
+       8   19393441   19394560       1119
+       9    9911620    9912320        700
