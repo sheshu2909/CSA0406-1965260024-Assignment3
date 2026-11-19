@@ -1,0 +1,9 @@
+mode            : mlock (locked)
+buffer          : 32 MB, iterations 2000
+mean            :      156.0 us
+minimum         :       91.9 us
+99th percentile :      506.8 us
+worst case      :     1793.9 us
+iterations > 1 ms: 6
+page faults     : 61
+(checksum 0)

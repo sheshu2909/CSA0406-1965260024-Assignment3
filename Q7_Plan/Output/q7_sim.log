@@ -1,0 +1,39 @@
+edge device: 2048 MB RAM, no swap, 1 MB modelled pages
+three tasks need 64 + 1500 + 128 = 1692 MB (fits)
+
+A. plain LRU, three tasks
+  control (RT)   working set    64 MB   faults      64
+  ML inference   working set  1500 MB   faults    1500
+  logger         working set   128 MB   faults     128
+  total                            1692
+
+B. control task pinned, three tasks
+  control (RT)   working set    64 MB   faults      64
+  ML inference   working set  1500 MB   faults    1500
+  logger         working set   128 MB   faults     128
+  total                            1692
+
+C. plain LRU, fourth 500 MB task added (2192 MB > 2048 MB)
+  control (RT)   working set    64 MB   faults      64
+  ML inference   working set  1500 MB   faults    2846
+  logger         working set   128 MB   faults     291
+  4th task       working set   500 MB   faults     679
+  total                            3880
+
+D. control task pinned, fourth task added
+  control (RT)   working set    64 MB   faults      64
+  ML inference   working set  1500 MB   faults    2846
+  logger         working set   128 MB   faults     291
+  4th task       working set   500 MB   faults     679
+  total                            3880
+
+interpretation:
+  A/B: the three working sets fit, so no capacity misses and
+       pinning changes latency only, not the fault count.
+  C:   1692 + 500 = 2192 MB exceeds RAM, so LRU starts evicting
+       ML pages and the fault count jumps from 1692 to 3880.
+  D:   the fault counts are the same as C, and the control task
+       still takes only 64 faults: its pages are re-referenced
+       every cycle, so LRU keeps them resident even unpinned.
+       Pinning makes that a guarantee rather than a likelihood;
+       it does not reduce a fault count that is already zero.

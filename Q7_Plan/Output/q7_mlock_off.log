@@ -1,0 +1,9 @@
+mode            : normal paging
+buffer          : 32 MB, iterations 2000
+mean            :      172.1 us
+minimum         :      100.0 us
+99th percentile :      624.1 us
+worst case      :     2941.9 us
+iterations > 1 ms: 6
+page faults     : 5
+(checksum 0)
