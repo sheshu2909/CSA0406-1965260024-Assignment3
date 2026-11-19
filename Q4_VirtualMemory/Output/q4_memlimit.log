@@ -1,0 +1,6 @@
+   64 MB  3 pass(es)      14.20 ms  faults     16384  peak working set    72812 KB  checksum 2088960
+  128 MB  3 pass(es)      28.87 ms  faults     32768  peak working set   138348 KB  checksum 4177920
+  256 MB  3 pass(es)      56.14 ms  faults     65536  peak working set   269420 KB  checksum 8355840
+  512 MB  3 pass(es)     174.12 ms  faults    131072  peak working set   531560 KB  checksum 16711680
+ 1024 MB  3 pass(es)     452.67 ms  faults    262144  peak working set  1055860 KB  checksum 33423360
+ 1536 MB  3 pass(es)     666.44 ms  faults    393216  peak working set  1580164 KB  checksum 50135040

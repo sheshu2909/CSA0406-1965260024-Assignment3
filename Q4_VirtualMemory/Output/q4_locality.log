@@ -1,0 +1,10 @@
+buffer 64 MB, MSYS2 page size 65536 B, Windows page 4096 B
+pages touched: 16384 (one byte per 4 KB)
+
+baseline   faults    18347  working set      64 KB (after trim)
+sequential faults    34818  (+16438)  time   32.145 ms
+trimmed before the random pass, working set 64 KB
+random     faults    51358  (+16432)  time   31.388 ms
+
+summary: 16384 pages touched, 16438 fault(s) sequential, 16432 random
+working set after the run: 65948 KB

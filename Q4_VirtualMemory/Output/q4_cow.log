@@ -1,0 +1,8 @@
+parent before fork                 working set   138356 KB   faults    34725
+child: read all pages              working set   136632 KB   faults    34280
+   (checksum 2949120)
+parent after child 1               working set   139140 KB   faults    34954
+child: wrote every page            working set   136628 KB   faults    34278
+parent after child 2               working set   139132 KB   faults    34956
+child: wrote only 1 MB             working set   136656 KB   faults    34288
+parent after child 3               working set   139132 KB   faults    34958
